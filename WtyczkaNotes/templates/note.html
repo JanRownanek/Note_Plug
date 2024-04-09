@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixelated Note</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="note" id="note">
+        <textarea id="note-content" class="note-content" rows="10" cols="50" placeholder="Start writing..."></textarea>
+        <div class="buttons">
+            <button class="prev-button" onclick="previousPage()">Previous</button>
+            <button class="next-button" onclick="nextPage()">Next</button>
+            <button class="save-button" onclick="saveNote()">Save</button>
+            <button class="lock-button" onclick="toggleLock()">Lock/Unlock</button>
+        </div>
+        <span id="page-counter">Page 1</span>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

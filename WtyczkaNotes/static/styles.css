@@ -1,0 +1,70 @@
+/* styles.css */
+body {
+    font-family: 'Courier New', sans-serif; /* Ustawienie czcionki dla całej strony */
+}
+
+.note {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 350px; /* Zwiększenie wysokości notatki, aby zmieściła numerację stron */
+    background-color: rgba(248, 229, 137, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    cursor: move;
+    overflow: hidden;
+}
+
+.note-content {
+    width: calc(100% - 20px);
+    height: calc(100% - 60px); /* Poprawka wysokości obszaru tekstu */
+    font-family: 'Courier New', sans-serif; /* Ustawienie czcionki dla obszaru tekstowego */
+    font-size: 16px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 0, 0.3);
+    border: none;
+    padding: 10px;
+    color: black;
+    outline: none;
+    overflow: auto;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev-button,
+.next-button,
+.save-button,
+.lock-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Courier New', sans-serif; /* Ustawienie czcionki dla przycisków */
+    font-size: 14px; /* Ustawienie rozmiaru czcionki dla przycisków */
+}
+
+.prev-button:hover,
+.next-button:hover,
+.save-button:hover,
+.lock-button:hover {
+    background-color: #2980b9;
+}
+
+.page-counter {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Courier New', sans-serif; /* Ustawienie czcionki dla numeracji stron */
+    font-size: 12px; /* Ustawienie rozmiaru czcionki dla numeracji stron */
+    color: #555; /* Kolor tekstu dla numeracji stron */
+}
